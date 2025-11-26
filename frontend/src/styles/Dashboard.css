@@ -1,0 +1,82 @@
+/* لون الأيقونات */
+.dash-icon {
+  font-size: 45px;
+}
+
+/* لون أيقونة Companies */
+.company-icon {
+  color: #007bff; /* blue */
+}
+
+/* لون أيقونة Departments */
+.dept-icon {
+  color: #28a745; /* green */
+}
+
+/* لون أيقونة Employees */
+.employee-icon {
+  color: #ff8800; /* orange */
+}
+
+/* لون عنوان Companies */
+.company-title {
+  color: #0056b3;
+}
+
+/* لون عنوان Departments */
+.department-title {
+  color: #1d7a38;
+}
+
+/* لون عنوان Employees */
+.employee-title {
+  color: #cc6600;
+}
+
+/* باقي نفس التصميم */
+.dashboard-wrapper {
+  padding: 35px;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.dashboard-header h2 {
+  font-size: 32px;
+  font-weight: 800;
+  color: #2c3e50;
+}
+
+.dashboard-grid {
+  margin-top: 35px;
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.dash-card {
+  flex: 1;
+  min-width: 260px;
+  text-decoration: none;
+  padding: 30px;
+  border-radius: 18px;
+  background: white;
+  color: #333;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  transition: all 0.25s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.dash-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 22px rgba(0,0,0,0.18);
+}
+
+.blue { border-left: 8px solid #007bff; }
+.green { border-left: 8px solid #28a745; }
+.orange { border-left: 8px solid #ff8800; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
