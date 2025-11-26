@@ -1,92 +1,96 @@
-# EMS-System (Employee Management System)
+# EMS-System
 
-نظام إدارة الموظفين المتكامل لإدارة الشركات، الإدارات، والموظفين بشكل احترافي وآمن.
+**Employee Management System**
 
----
-
-## 🧩 **المميزات**
-
-### 🔹 **Backend (Frappe Framework)**
-- واجهة REST API لإدارة:
-  - الشركات
-  - الإدارات
-  - الموظفين
-- التحقق من صحة بيانات الإدخال:
-  - صياغة الأسماء
-  - صحة وخصوصية الإيميل
-  - عدم تكرار الإيميل
-  - التحقق من رقم الجوال
-  - ربط الإدارة بالشركة بشكل صحيح
-- حساب آلي (Days Employed)
-- أنواع مستندات مخصصة (DocTypes)
-- إدارة صلاحيات المستخدمين (Authentication & Roles)
-- معالجة الاستجابة (نجاح/خطأ) بشكل موحد
+A comprehensive solution for managing companies, departments, and employees, built with a robust Frappe backend and a modern React.js frontend.
 
 ---
 
-### 🔹 **Frontend (React.js)**
-- لوحة تحكم حديثة (تصميم احترافي متجاوب)
-- صفحات إدارة كاملة:
-  - عرض/إنشاء/تحديث الشركات
-  - عرض/إنشاء/تحديث الإدارات
-  - عرض/إنشاء/تحديث الموظفين
-- تحقق نماذج الإدخال
-- إشعارات فورية (Toast)
-- دمج كامل مع واجهات برمجة التطبيقات
-- مكونات قابلة لإعادة الاستخدام
-- حماية الروابط (Protected Routes)
-- أيقونات عالية الجودة
-- متجاوب مع الجوال والكمبيوتر
+## 🧩 Features
+
+### 🔹 Backend (Frappe Framework)
+- REST APIs for:
+  - Companies
+  - Departments
+  - Employees  
+- Data validations, including:
+  - Name formatting  
+  - Email syntax + uniqueness  
+  - Mobile number validation  
+  - Ensuring departments belong to their respective companies  
+- Auto-calculated fields (e.g., Days Employed)
+- Custom DocTypes:
+  - Company  
+  - Department  
+  - Employee  
+- Role-based authentication  
+- Unified error and success response wrappers
 
 ---
 
-## 📦 **التقنيات المستخدمة**
+### 🔹 Frontend (React.js)
+- Modern dashboard UI (Sidebar, Topbar, Layout)
+- Feature-rich pages:
+  - Company: List / Create / Update
+  - Department: List / Create / Update
+  - Employee: List / Create / Update
+- Form validation and error handling
+- Toast notifications for feedback
+- Full API integration with backend
+- Modular & reusable components
+- Protected routes (authentication/authorization)
+- Icon library (React Icons, FontAwesome)
+- Fully responsive design (desktop & mobile)
 
-### 🔹 **Backend**
+---
+
+## 📦 Technologies Used
+
+### 🔹 Backend
 - Python
 - Frappe Framework
 - MariaDB
 - REST API
 - Frappe ORM
-- Utilties للتحقق
+- Validation utilities
 
-### 🔹 **Frontend**
+### 🔹 Frontend
 - React.js
 - React Router
 - Axios
-- TailwindCSS / CSS
-- FontAwesome & React Icons
+- TailwindCSS / Custom CSS
+- FontAwesome / React Icons
 
 ---
 
-## 🧪 **واجهات برمجة التطبيقات (API Endpoints)**
+## 🧪 API Endpoints
 
-### الشركات (Companies)
-| Method | Endpoint                              | Description         |
-|--------|---------------------------------------|---------------------|
-| GET    | `/api/method/.../get_companies`       | جميع الشركات        |
-| GET    | `/api/method/.../get_company/{name}`  | شركة واحدة          |
+### Companies
+| Method | Endpoint                                   | Description           |
+|--------|--------------------------------------------|-----------------------|
+| GET    | `/api/method/.../get_companies`            | Retrieve all companies |
+| GET    | `/api/method/.../get_company/{name}`       | Retrieve a company by name |
 
-### الإدارات (Departments)
-| Method | Endpoint                               | Description            |
-|--------|----------------------------------------|------------------------|
-| GET    | `/api/method/.../get_departments`      | جميع الإدارات           |
-| GET    | `/api/method/.../get_department/{name}`| إدارة واحدة             |
+### Departments
+| Method | Endpoint                                   | Description                 |
+|--------|--------------------------------------------|-----------------------------|
+| GET    | `/api/method/.../get_departments`          | Retrieve all departments    |
+| GET    | `/api/method/.../get_department/{name}`    | Retrieve a department by name |
 
-### الموظفين (Employees)
-| Method | Endpoint                               | Description            |
-|--------|----------------------------------------|------------------------|
-| GET    | `/api/method/.../get_employees`        | قائمة الموظفين          |
-| GET    | `/api/method/.../get_employee/{name}`  | موظف محدد               |
-| POST   | `/api/method/.../create_employee`      | إضافة موظف جديد         |
-| PATCH  | `/api/method/.../patch_employee/{name}`| تحديث بعض الحقول        |
-| DELETE | `/api/method/.../delete_employee/{name}`| حذف موظف               |
+### Employees
+| Method | Endpoint                                   | Description                     |
+|--------|--------------------------------------------|----------------------------------|
+| GET    | `/api/method/.../get_employees`            | Retrieve all employees          |
+| GET    | `/api/method/.../get_employee/{name}`      | Retrieve an employee by name    |
+| POST   | `/api/method/.../create_employee`          | Create a new employee           |
+| PATCH  | `/api/method/.../patch_employee/{name}`    | Update employee fields          |
+| DELETE | `/api/method/.../delete_employee/{name}`   | Delete an employee              |
 
 ---
 
-## 🖥️ **تركيب النظام (Installation & Setup)**
+## 🖥️ Installation & Setup
 
-### **Backend (Frappe Framework)**
+### 🔹 Backend (Frappe Framework)
 ```bash
 bench init ems-bench
 cd ems-bench
@@ -98,6 +102,6 @@ bench start
 
 ---
 
-يمكنك تطوير النظام وإضافة خصائص جديدة، أو تعديل الواجهة لتناسب احتياجك.
+You can further customize the system, add features, or modify the UI to fit your requirements.
 
-### 📚 للمزيد من المعلومات أو المساهمة في المشروع، يرجى مراجعة مستند التوثيق أو فتح Issue على GitHub.
+For more details or to contribute, please see the documentation or open an issue on GitHub.
