@@ -47,8 +47,9 @@ A comprehensive solution for managing companies, departments, and employees, bui
 
 ---
 ## Demo Video
+[Watch Demo ](https://github.com/user-attachments/assets/d937385f-3cc1-4b0c-8d85-f9c7c2b0bb94)
 
-[![Watch the video](https://github.com/user-attachments/assets/d937385f-3cc1-4b0c-8d85-f9c7c2b0bb94)
+
 ## 📦 Technologies Used
 
 ### 🔹 Backend
