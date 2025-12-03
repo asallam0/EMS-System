@@ -1,4 +1,3 @@
-// CreateEmployee.js
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/Employees.css";
@@ -7,8 +6,8 @@ import axios from "axios";
 const CreateEmployee = () => {
   const [form, setForm] = useState({});
   const [saving, setSaving] = useState(false);
-  const [message, setMessage] = useState(""); // الرسالة من السيرفر
-  const [messageType, setMessageType] = useState(""); // 'error' | 'success'
+  const [message, setMessage] = useState(""); 
+  const [messageType, setMessageType] = useState(""); 
   const [companies, setCompanies] = useState([]);
   const [departments, setDepartments] = useState([]);
   const navigate = useNavigate();
@@ -57,7 +56,7 @@ const CreateEmployee = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setSaving(true);
-    setMessage(""); // إعادة تعيين الرسالة قبل الحفظ
+    setMessage(""); 
 
     try {
       const res = await axios.post(
