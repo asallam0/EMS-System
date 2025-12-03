@@ -1,4 +1,3 @@
-// UpdateEmployee.js
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import "../styles/Employees.css";
@@ -9,8 +8,8 @@ const UpdateEmployee = () => {
   const [form, setForm] = useState({});
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
-  const [message, setMessage] = useState(""); // عرض الرسالة من السيرفر
-  const [messageType, setMessageType] = useState(""); // 'error' | 'success'
+  const [message, setMessage] = useState(""); 
+  const [messageType, setMessageType] = useState(""); 
   const [companies, setCompanies] = useState([]);
   const [departments, setDepartments] = useState([]);
   const navigate = useNavigate();
@@ -85,7 +84,7 @@ const UpdateEmployee = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setSaving(true);
-    setMessage(""); // إعادة تعيين الرسالة قبل الحفظ
+    setMessage(""); 
 
     try {
       const res = await axios.put(
@@ -94,7 +93,6 @@ const UpdateEmployee = () => {
         { withCredentials: true }
       );
 
-      // الرسالة اللي جايه من السيرفر تظهر دائماً
       if (res.data.message && res.data.message.message) {
         setMessage(res.data.message.message);
         setMessageType(res.data.message.success ? "success" : "error");
